@@ -1,7 +1,6 @@
 # **BIOS 611 Final Project**
 
 This project analyzes the relationship between **weather conditions** and **Premier League match performance** for London-based clubs from 2000 through 2021.  
-All analyses are fully reproducible using Docker and a Makefile, following the workflow taught in BIOS 611.
 
 ---
 
@@ -145,5 +144,22 @@ After running `make report.html` or `make all`, you will see:
 ### **Model Files**
 - `build_model.rds`
 - `xgboost_acc.txt`
+
+---
+
+---
+
+# **Data Sources**
+
+Raw match and weather data were obtained from publicly available Kaggle datasets:
+
+- **Premier League match results (2000–2021)**  
+  https://www.kaggle.com/datasets/saife245/english-premier-league?select=2021-2022.csv
+
+- **London weather records**  
+  https://www.kaggle.com/datasets/emmanuelfwerr/london-weather-data
+
+These files were downloaded locally and processed through `data_import.R` to create  
+`football_combined_cleaned.csv` for analysis.
 
 ---
