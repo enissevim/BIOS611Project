@@ -1,4 +1,5 @@
 FROM rocker/verse
+% I was using `FROM --platform=linux/amd64 rocker/verse` to compile
 
 RUN apt-get update && apt-get install -y make
 
