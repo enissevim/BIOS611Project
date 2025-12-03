@@ -1,6 +1,7 @@
 FROM rocker/verse
 
-RUN apt update && \
-    apt install -y man-db && \
-    yes | unminimize && \
-    rm -rf /var/lib/apt/lists/*
+RUN apt-get update && apt-get install -y make
+
+RUN R -e "install.packages(c('tidyverse','caret','xgboost','rmarkdown','lubridate','factoextra','Rtsne'))"
+
+WORKDIR /home/rstudio/work
