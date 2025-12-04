@@ -20,7 +20,6 @@ goals_weather_data <- df %>%
 png("figures/goals_by_rain_normalized.png", width = 1000, height = 800)
 ggplot(goals_weather_data, aes(Rainy, Total_Goals, fill = Rainy)) +
   geom_violin(alpha = 0.7, scale = "width") +
-  geom_jitter(width = 0.2, alpha = 0.3, size = 1) +
   geom_boxplot(width = 0.1, alpha = 0.8, outlier.shape = NA) +
   stat_summary(fun = mean, geom = "point", shape = 23, size = 5, fill = "white") +
   scale_fill_manual(values = c("FALSE" = "gold", "TRUE" = "skyblue")) +
